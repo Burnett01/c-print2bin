@@ -28,7 +28,7 @@ print2bin( const char *str )
     uint8_t
       a         /* Ascii */
     , b         /* Bit */
-    , p         /* Padding (right) */
+    , p = 0     /* Padding (right) */
     , l = 8U;   /* Binary Layout */
 
     while( str && *str != '\0' )
@@ -59,7 +59,8 @@ int main( void )
 	printf("Char | Ascii  | Bin (RTL)\n");
 	printf("-------------------------");
 
-	print2bin("steven");
+	print2bin("Steven");
 
 	return 0;
 }
+
